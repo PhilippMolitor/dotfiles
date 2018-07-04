@@ -1,0 +1,253 @@
+[settings]
+screenchange-reload = true
+
+[colors]
+fg = #f5f5f5
+bg = #d0333333
+fg-alt = #b8b8b8
+bg-alt = #575757
+
+good = #4caf50
+warning = #ffc107
+bad = #e53935
+
+accent = ${xrdb:color4:#03a9f4}
+
+[bar/night]
+monitor = eDP1
+
+offset-x = 0
+offset-y = 0
+padding = 3
+module-margin = 3
+
+width = 100%
+height = 24
+
+foreground = ${colors.fg}
+background = ${colors.bg}
+cursor-click = pointer
+
+font-0 = "SF Pro Display:style=Regular:size=11;1"
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;2"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;2"
+font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=10;2"
+font-4 = unifont:fontformat=truetype:size=10:weight=bold:antialias=false;1
+
+fixed-center = true
+modules-left = workspaces cpu_cores cpu_temp mem_bar
+modules-center = win_title
+modules-right = vol_bar net_eth net_wlan bat_icon clock menu_sys
+
+[module/workspaces]
+type = internal/i3
+
+pin-workspaces = false
+index-sort = true
+enable-click = true
+enable-scroll = true
+wrapping-scroll = true
+reverse-scroll = false
+
+label-focused = 
+label-visible = 
+label-unfocused = 
+label-urgent = 
+
+label-focused-foreground = ${colors.fg}
+label-visible-foreground = ${colors.fg}
+label-unfocused-foreground = ${colors.fg-alt}
+label-urgent-foreground = ${colors.accent}
+
+label-focused-padding = 1
+label-visible-padding = 1
+label-unfocused-padding = 1
+label-urgent-padding = 1
+
+[module/cpu_cores]
+type = internal/cpu
+
+interval = 1
+format = <label> <ramp-coreload>
+label = 
+
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+ramp-coreload-0-foreground = ${colors.good}
+ramp-coreload-1-foreground = ${colors.good}
+ramp-coreload-2-foreground = ${colors.good}
+ramp-coreload-3-foreground = ${colors.good}
+ramp-coreload-4-foreground = ${colors.warning}
+ramp-coreload-5-foreground = ${colors.warning}
+ramp-coreload-6-foreground = ${colors.warning}
+ramp-coreload-7-foreground = ${colors.bad}
+
+[module/cpu_temp]
+type = internal/temperature
+
+interval = 5
+thermal-zone = 6
+warn-temperature = 70
+units = true
+
+format = <ramp> <label>
+format-warn =  <label-warn>
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.bad}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+
+[module/mem_bar]
+type = internal/memory
+
+interval = 1
+
+format = <label>  <bar-used>
+label = 
+
+bar-used-width = 20
+bar-used-indicator =
+bar-used-fill = ▮
+bar-used-empty = ▯
+
+bar-used-foreground-0 = ${colors.good}
+bar-used-foreground-1 = ${colors.good}
+bar-used-foreground-2 = ${colors.warning}
+bar-used-foreground-3 = ${colors.bad}
+bar-used-empty-foreground = ${colors.fg-alt}
+
+[module/win_title]
+type = internal/xwindow
+
+format = <label>
+label = %title%
+label-maxlen = 64
+
+[module/vol_bar]
+type = internal/alsa
+
+format-volume =   <bar-volume>
+label-muted = 
+
+
+bar-volume-width = 20
+bar-volume-indicator =
+bar-volume-fill = ▮
+bar-volume-empty = ▯
+
+bar-volume-foreground-0 = ${colors.good}
+bar-volume-foreground-1 = ${colors.good}
+bar-volume-foreground-2 = ${colors.good}
+bar-volume-foreground-3 = ${colors.good}
+bar-volume-foreground-4 = ${colors.warning}
+bar-volume-foreground-5 = ${colors.warning}
+bar-volume-foreground-6 = ${colors.bad}
+bar-volume-empty-foreground = ${colors.fg-alt}
+
+[module/net_eth]
+type = internal/network
+
+interface = eth0
+interval = 2
+
+format-connected = <label-connected>
+format-packetloss = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected =  %ifname%
+label-disconnected = 
+format-disconnected-foreground = ${colors.warning}
+
+[module/net_wlan]
+type = internal/network
+
+interface = wlan0
+interval = 2
+
+format-connected = <label-connected>
+format-packetloss = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected =  %essid%
+label-disconnected = 
+
+format-disconnected-foreground = ${colors.warning}
+
+[module/bat_icon]
+type = internal/battery
+
+full-at = 99
+battery = BAT0
+adapter = ADP1
+poll-interval = 5
+
+format-full = 
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%%
+label-charging = %percentage%%
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+[module/clock]
+type = internal/date
+
+interval = 1
+format = <label>
+label = %date%%time%
+date =
+time = %H:%M
+date-alt = %Y.%m.%d 
+time-alt = %H:%M
+
+
+[module/menu_sys]
+type = custom/menu
+
+expand-right = false
+label-open = 
+label-close = 
+label-separator = "    "
+
+format-close-foreground = ${colors.highlight}
+
+menu-0-0 = 
+menu-0-0-exec = ~/.config/caffeine/caffeine.sh
+menu-0-1 = 
+menu-0-1-exec = menu-open-1
+menu-0-2 = 
+menu-0-2-exec = menu-open-2
+menu-0-3 = 
+menu-0-3-exec = menu-open-3
+
+menu-1-0 =  confirm
+menu-1-0-exec = poweroff
+menu-1-0-foreground = ${colors.bad}
+menu-2-0 =  confirm
+menu-2-0-exec = reboot
+menu-2-0-foreground = ${colors.bad}
+menu-3-0 =  confirm
+menu-3-0-exec = i3-msg exit
+menu-3-0-foreground = ${colors.bad}
+
