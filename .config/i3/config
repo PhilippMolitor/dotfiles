@@ -59,11 +59,13 @@ gaps inner 20
 
 # default behaviours
 workspace_auto_back_and_forth yes
-default_orientation auto
+default_orientation vertical
 popup_during_fullscreen smart
 focus_follows_mouse yes
-focus_on_window_activation smart
+focus_on_window_activation yes
 mouse_warping output
+
+# popups and similar float by default
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable
@@ -71,7 +73,6 @@ for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 for_window [instance="pavucontrol"] floating enable
-for_window [class="^.*"] border pixel 3
 
 #----------#
 # keybindings
