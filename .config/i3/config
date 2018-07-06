@@ -136,8 +136,8 @@ bindsym $KEY_MOD+$KEY_ALT+K move window to output up
 bindsym $KEY_MOD+$KEY_ALT+L move window to output right
 
 # resize 25px or 5%
-bindsym $KEY_MOD+Shift+H resize shrink right 25px or 5 ppt
-bindsym $KEY_MOD+Shift+J resize grow down 25px or 5 ppt
-bindsym $KEY_MOD+Shift+K resize shrink down 25px or 5 ppt
-bindsym $KEY_MOD+Shift+L resize grow right 25px or 5 ppt
+bindsym $KEY_MOD+Shift+H resize shrink width 25px or 5 ppt
+bindsym $KEY_MOD+Shift+J resize grow height 25px or 5 ppt
+bindsym $KEY_MOD+Shift+K resize shrink height 25px or 5 ppt
+bindsym $KEY_MOD+Shift+L resize grow width 25px or 5 ppt
 
