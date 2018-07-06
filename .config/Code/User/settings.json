@@ -1,0 +1,52 @@
+{
+    // ui
+    // editor
+    "editor.fontFamily": "Hurmit Nerd Font Mono",
+    "editor.fontSize": 12,
+    "editor.cursorBlinking": "expand",
+    "editor.fontLigatures": false,
+    "editor.renderIndentGuides": false,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        79
+    ],
+    // workbench
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.statusBar.feedback.visible": false,
+    // telemetry
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    // git
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "workbench.colorTheme": "Material Theme Palenight High Contrast",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    // rust
+    "rust-client.channel": "stable",
+    // python
+    "python.jediEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.pep8Enabled": true,
+    "python.linting.pydocstyleEnabled": true,
+    "python.linting.mypyEnabled": true,
+    // guides
+    "guides.enabled": true,
+    "guides.active.gutter": true,
+    "guides.active.width": 2,
+    "guides.stack.enabled": true,
+    "guides.sendUsagesAndStats": false,
+    // emmet
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+    "emmet.includeLanguages": {
+        "jinja-html": "html"
+    },
+    "materialTheme.accentPrevious": "Orange",
+    "materialTheme.fixIconsRunning": false,
+    "materialTheme.accent": "Breaking Bad"
+}
