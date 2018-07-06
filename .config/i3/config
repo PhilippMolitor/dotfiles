@@ -141,3 +141,6 @@ bindsym $KEY_MOD+Shift+J resize grow height 25px or 5 ppt
 bindsym $KEY_MOD+Shift+K resize shrink height 25px or 5 ppt
 bindsym $KEY_MOD+Shift+L resize grow width 25px or 5 ppt
 
+# modify gaps
+bindsym $KEY_MOD+B gaps inner all plus 10
+bindsym $KEY_MOD+Shift+B gaps inner all minus 10
