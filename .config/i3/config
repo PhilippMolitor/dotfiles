@@ -12,7 +12,7 @@ set $KEY_ALT Mod1
 #----------#
 # autostart
 exec --no-startup-id xset s 300
-#exec --no-startup-id xss-lock -n "$LOCK"
+exec --no-startup-id xss-lock -n "$LOCK"
 exec --no-startup-id wal -R
 exec --no-startup-id compton -b
 exec --no-startup-id polybar -r night
