@@ -151,9 +151,11 @@ bar-volume-foreground-0 = ${colors.good}
 bar-volume-foreground-1 = ${colors.good}
 bar-volume-foreground-2 = ${colors.good}
 bar-volume-foreground-3 = ${colors.good}
-bar-volume-foreground-4 = ${colors.warning}
-bar-volume-foreground-5 = ${colors.warning}
-bar-volume-foreground-6 = ${colors.bad}
+bar-volume-foreground-4 = ${colors.good}
+bar-volume-foreground-5 = ${colors.good}
+bar-volume-foreground-6 = ${colors.warning}
+bar-volume-foreground-7 = ${colors.warning}
+bar-volume-foreground-8 = ${colors.bad}
 bar-volume-empty-foreground = ${colors.fg-alt}
 
 [module/net_eth]

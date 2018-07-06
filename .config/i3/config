@@ -40,7 +40,7 @@ set_from_resource $C_13 i3wm.color13 #000000
 set_from_resource $C_14 i3wm.color14 #000000
 set_from_resource $C_15 i3wm.color15 #ffffff
 #class                   o.bor   bg      text    ind.    i.bor
-client.focused           $C_02   $C_02   $C_07   $C_02   $C_09
+client.focused           $C_09   $C_02   $C_07   $C_09   $C_09
 client.focused_inactive  $C_02   $C_02   $C_07   $C_02   $C_02
 client.unfocused         $C_02   $C_02   $C_07   $C_02   $C_02
 client.urgent            $C_02   $C_02   $C_07   $C_02   $C_02
@@ -51,7 +51,7 @@ client.background        $C_02
 #----------#
 # gaps & borders
 default_border pixel 3
-#default_floating_border pixel 3
+default_floating_border pixel 3
 hide_edge_borders none
 smart_borders no_gaps
 gaps outer 0
@@ -71,6 +71,7 @@ for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 for_window [instance="pavucontrol"] floating enable
+for_window [class="^.*"] border pixel 3
 
 #----------#
 # keybindings
@@ -91,7 +92,7 @@ bindsym $KEY_MOD+Shift+I exec --no-startup-id $LOCK
 floating_modifier $KEY_MOD
 bindsym $KEY_MOD+Shift+R restart
 bindsym $KEY_MOD+Q kill
-bindsym $KEY_MOD+Space floating toggle
+bindsym $KEY_MOD+space floating toggle
 bindsym $KEY_MOD+S layout toggle split
 bindsym $KEY_MOD+X fullscreen toggle
 bindsym $KEY_MOD+Z sticky toggle
@@ -135,8 +136,8 @@ bindsym $KEY_MOD+$KEY_ALT+K move window to output up
 bindsym $KEY_MOD+$KEY_ALT+L move window to output right
 
 # resize 25px or 5%
-bindsym $KEY_MOD+Shift+H resize shrink left 25px or 5 ppt
+bindsym $KEY_MOD+Shift+H resize shrink right 25px or 5 ppt
 bindsym $KEY_MOD+Shift+J resize grow down 25px or 5 ppt
-bindsym $KEY_MOD+Shift+K resize shrink up down 25px or 5 ppt
+bindsym $KEY_MOD+Shift+K resize shrink down 25px or 5 ppt
 bindsym $KEY_MOD+Shift+L resize grow right 25px or 5 ppt
 

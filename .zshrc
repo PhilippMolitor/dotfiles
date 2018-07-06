@@ -37,8 +37,16 @@ if [[ -n $SSH_CONNECTION ]]; then
   export TERM='xterm-256color'
 fi
 
-export EDITOR='nvim'
-export VISUAL='nvim'
+if [ -x "$(command -v nvim)" ]; then
+  export EDITOR='nvim'
+  export VISUAL='nvim'
+elif [ -x "$(command -v vim)" ]; then
+  export EDITOR='vim'
+  export VISUAL='vim'
+else
+  export EDITOR='vi'
+  export VISUAL='vi'
+fi
 
 # ENV: SSH_KEY_PATH
 export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -65,24 +73,24 @@ alias pacman="aurman"
 # pretty mount table
 alias mount="mount | column -t | sort"
 
-# vtop theme
-alias vtop="vtop -t monokai"
-
 # python virtualenv
 alias venv="virtualenv"
 alias vact="source ./env/bin/activate"
 
 # ls on steroids
-unalias ll
-unalias la
-alias ls="ls_extended -sh"
+if [ -x "$(command -v ls_extended)" ]; then
+  alias ls="ls_extended -sh"
+fi
+
+unalias ll 2>/dev/null
+unalias la 2>/dev/null
 alias ll="ls -la"
 
 # set pywal background
 alias background="wal -g --backend haishoku -i"
 
-# config management
-function configg {
+# config management with git
+function dotconf {
   local cdir="$HOME/.cfg"
 
   [[ -d $cdir ]] || mkdir -p $cdir
