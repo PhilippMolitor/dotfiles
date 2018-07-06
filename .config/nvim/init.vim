@@ -7,7 +7,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'machakann/vim-highlightedyank'
 
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'dylanaraps/wal.vim'
 
 Plug 'mattn/emmet-vim'
@@ -42,6 +41,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 " indent line guides
 let g:indentLine_enabled = 1
+let g:indentLine_char = '┆'
 
 " highlighted yank & paste
 let g:highlightedyank_highlight_duration = 3000
