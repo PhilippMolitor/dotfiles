@@ -2,7 +2,7 @@
 cat ~/.cache/wal/sequences
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/phil/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 export UPDATE_ZSH_DAYS=7
 
 ZSH_THEME="ban"
