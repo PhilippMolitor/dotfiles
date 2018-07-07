@@ -71,7 +71,7 @@ alias vim="$EDITOR"
 alias pacman="aurman"
 
 # pretty mount table
-alias mount="mount | column -t | sort"
+alias mountfmt="mount | column -t | sort"
 
 # python virtualenv
 alias venv="virtualenv"
