@@ -37,7 +37,7 @@ font-4 = unifont:fontformat=truetype:size=10:weight=bold:antialias=false;1
 fixed-center = true
 modules-left = workspaces cpu_cores cpu_temp mem_bar
 modules-center = win_title
-modules-right = vol_bar net_eth net_wlan bat_icon clock menu_sys
+modules-right = vol_bar net_eth net_wlan bat_icon clock caffeine menu_sys
 
 [module/workspaces]
 type = internal/i3
@@ -223,6 +223,18 @@ time = %H:%M
 date-alt = %Y.%m.%d 
 time-alt = %H:%M
 
+[module/caffeine]
+type = custom/script
+
+exec = echo 
+exec-if = [ ! "$(~/.config/caffeine/caffeine.sh status | grep active)" == "" ]
+interval = 5
+
+click-left = ~/.config/caffeine/caffeine.sh
+click-middle = ~/.config/caffeine/caffeine.sh
+click-right = ~/.config/caffeine/caffeine.sh
+
+format-foreground = ${colors.accent}
 
 [module/menu_sys]
 type = custom/menu
