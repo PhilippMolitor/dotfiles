@@ -34,6 +34,9 @@ set noswapfile
 set nobackup
 set nowritebackup
 
+" yank & paste --> system clipboard
+set clipboard=unnamedplus
+
 " vim-airline
 let g:airline_theme='wal'
 let g:airline_powerline_fonts = 1
