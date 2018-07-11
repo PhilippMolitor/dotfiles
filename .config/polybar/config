@@ -188,16 +188,17 @@ format-disconnected-foreground = ${colors.warning}
 [module/bat_icon]
 type = internal/battery
 
-full-at = 99
+full-at = 95
 battery = BAT0
 adapter = ADP1
 poll-interval = 5
 
-format-full = 
+format-full = <label-full>
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
-label-discharging = %percentage%%
+label-full = 
 label-charging = %percentage%%
+label-discharging = %percentage%%
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
