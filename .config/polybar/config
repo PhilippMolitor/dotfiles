@@ -228,12 +228,12 @@ time-alt = %H:%M
 type = custom/script
 
 exec = echo 
-exec-if = [ ! "$(~/.config/caffeine/caffeine.sh status | grep active)" == "" ]
+exec-if = [ ! "$(~/.scripts/caffeine/caffeine.sh status | grep active)" == "" ]
 interval = 5
 
-click-left = ~/.config/caffeine/caffeine.sh
-click-middle = ~/.config/caffeine/caffeine.sh
-click-right = ~/.config/caffeine/caffeine.sh
+click-left = ~/.scripts/caffeine/caffeine.sh
+click-middle = ~/.scripts/caffeine/caffeine.sh
+click-right = ~/.scripts/caffeine/caffeine.sh
 
 format-foreground = ${colors.accent}
 
@@ -248,7 +248,7 @@ label-separator = "    "
 format-close-foreground = ${colors.highlight}
 
 menu-0-0 = 
-menu-0-0-exec = ~/.config/caffeine/caffeine.sh
+menu-0-0-exec = ~/.scripts/caffeine/caffeine.sh
 menu-0-1 = 
 menu-0-1-exec = menu-open-1
 menu-0-2 = 

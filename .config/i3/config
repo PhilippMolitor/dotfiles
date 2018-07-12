@@ -3,7 +3,7 @@
 # variables
 set $TERM termite
 set $LAUNCHER rofi -show combi
-set $LOCK ~/.config/i3lock/blurlock.sh
+set $LOCK ~/.scripts/i3lock/blurlock.sh
 
 # keys
 set $KEY_MOD Mod4
