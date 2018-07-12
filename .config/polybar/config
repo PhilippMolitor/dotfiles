@@ -1,5 +1,5 @@
 [settings]
-screenchange-reload = true
+screenchange-reload = false
 
 [colors]
 fg = #f5f5f5
@@ -221,7 +221,7 @@ format = <label>
 label = %date%%time%
 date =
 time = %H:%M
-date-alt = %Y.%m.%d 
+date-alt = "%Y.%m.%d  /  "
 time-alt = %H:%M
 
 [module/caffeine]
