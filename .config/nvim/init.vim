@@ -24,6 +24,10 @@ syntax on
 
 " tabs
 set softtabstop=2
+set expandtab
+set smarttab
+set shiftwidth=2
+set tabstop=2
 
 " enable mouse interaction
 set selectmode+=mouse
