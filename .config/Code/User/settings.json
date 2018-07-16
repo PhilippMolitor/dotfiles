@@ -1,5 +1,6 @@
 {
     // ui
+    "window.menuBarVisibility": "toggle",
     // editor
     "editor.fontFamily": "Hurmit Nerd Font Mono",
     "editor.fontSize": 12,
@@ -13,19 +14,21 @@
         79
     ],
     // workbench
-    "workbench.startupEditor": "newUntitledFile",
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Material Theme Palenight High Contrast",
+    "workbench.iconTheme": "file-icons",
     "workbench.statusBar.feedback.visible": false,
+    // explorer
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
     // telemetry
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     // git
     "git.enableSmartCommit": true,
     "git.autofetch": true,
-    "workbench.colorTheme": "Material Theme Palenight High Contrast",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
     // rust
-    "rust-client.channel": "stable",
+    "rust-client.channel": "nightly",
     // python
     "python.jediEnabled": true,
     "python.linting.enabled": true,
@@ -45,8 +48,5 @@
     "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
     "emmet.includeLanguages": {
         "jinja-html": "html"
-    },
-    "materialTheme.accentPrevious": "Orange",
-    "materialTheme.fixIconsRunning": false,
-    "materialTheme.accent": "Breaking Bad"
+    }
 }
