@@ -13,4 +13,4 @@ clickable_url = true
 dynamic_title = true
 
 [colors]
-background = rgba(40, 40, 40, 0.85)
+background = rgba(40, 40, 40, 0.9)
