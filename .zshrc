@@ -6,16 +6,20 @@ export ZSH=$HOME/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.config/zsh
 export UPDATE_ZSH_DAYS=7
 
-ZSH_THEME="ban"
+ZSH_THEME="lambda-mod"
 
 plugins=(
-  git
+  arch
   colored-man-pages
   colorize
   cp
-  virtualenv
-  arch
+  docker
+  docker-compose
+  python
   sudo
+  tmux
+  ufw
+  virtualenv
   zsh-autosuggestions
 )
 
