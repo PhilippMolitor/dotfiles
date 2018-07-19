@@ -1,1 +1,9 @@
+rofi.terminal: termite
+rofi.ssh-client: ssh
+rofi.run-shell-command: {terminal} -e {cmd}
+rofi.ssh-command: {terminal} -e "{ssh-client} {host}" 
+
+rofi.modi: run,window,ssh
+
 rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
+
