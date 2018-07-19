@@ -36,15 +36,14 @@ if [[ -n $SSH_CONNECTION ]]; then
 fi
 
 if [ -x "$(command -v nvim)" ]; then
-  export EDITOR='nvim'
   export VISUAL='nvim'
 elif [ -x "$(command -v vim)" ]; then
-  export EDITOR='vim'
   export VISUAL='vim'
 else
-  export EDITOR='vi'
   export VISUAL='vi'
 fi
+
+export EDITOR="$VISUAL"
 
 # ENV: SSH_KEY_PATH
 export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -86,9 +85,10 @@ if [ -x "$(command -v exa)" ]; then
 fi
 
 alias ll="ls -l"
+alias la="ls -la"
 
 # set pywal background
-alias background="wal -g --backend haishoku -i"
+alias background="wal --backend haishoku -i"
 
 # config management with git
 function dotconf {
