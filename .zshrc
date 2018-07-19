@@ -78,13 +78,16 @@ alias venv="virtualenv"
 alias vact="source ./env/bin/activate"
 
 # ls on steroids
-if [ -x "$(command -v ls_extended)" ]; then
-  alias ls="ls_extended -sh"
-fi
-
+unalias l 2>/dev/null
 unalias ll 2>/dev/null
 unalias la 2>/dev/null
-alias ll="ls -la"
+unalias lsa 2>/dev/null
+
+if [ -x "$(command -v exa)" ]; then
+  alias ls="exa -h@ --git --group --group-directories-first --color always"
+fi
+
+alias ll="ls -l"
 
 # set pywal background
 alias background="wal -g --backend haishoku -i"
@@ -96,6 +99,6 @@ function dotconf {
   [[ -d $cdir ]] || mkdir -p $cdir
   [[ -f $cdir/HEAD ]] || git init --bare $cdir
 
-  git --git-dir=$cdir --work-tree=$HOME/ "$@" || echo -e "\n\nPlease specify a git action"
+  git --git-dir=$cdir --work-tree=$HOME/ "$@"
 }
 
