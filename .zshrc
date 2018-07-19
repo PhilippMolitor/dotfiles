@@ -3,6 +3,7 @@ cat ~/.cache/wal/sequences
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+export ZSH_CUSTOM=$HOME/.config/zsh
 export UPDATE_ZSH_DAYS=7
 
 ZSH_THEME="ban"
@@ -21,13 +22,6 @@ plugins=(
 DISABLE_LS_COLORS="false"
 ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-# HIST_STAMPS="mm/dd/yyyy"
-# ZSH_CUSTOM=/path/to/new-custom-folder
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-# CASE_SENSITIVE="true"
-# HYPHEN_INSENSITIVE="true"
-# DISABLE_AUTO_UPDATE="true"
 
 source $ZSH/oh-my-zsh.sh
 
