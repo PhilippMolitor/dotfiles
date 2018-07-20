@@ -49,7 +49,7 @@ export EDITOR="$VISUAL"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # ENV: BROWSER
-export BROWSER="/usr/bin/opera"
+export BROWSER="/usr/bin/firefox"
 
 # ENV: PAGER
 export PAGER="most"
