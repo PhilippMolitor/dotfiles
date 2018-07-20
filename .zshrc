@@ -90,6 +90,9 @@ alias la="ls -la"
 # set pywal background
 alias background="wal --backend colorz -i"
 
+# housekeeping (updates, cache cleanup, etc.)
+alias housekeeping="pacman -Syyu && pacman -Rns $(pacman -Qtdq) && sudo paccache -rk0"
+
 # config management with git
 function dotconf {
   local cdir="$HOME/.cfg"
