@@ -88,7 +88,7 @@ alias ll="ls -l"
 alias la="ls -la"
 
 # set pywal background
-alias background="wal --backend haishoku -i"
+alias background="wal --backend colorz -i"
 
 # config management with git
 function dotconf {
