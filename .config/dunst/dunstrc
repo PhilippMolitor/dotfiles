@@ -114,12 +114,12 @@ close_all = ctrl+space
 [urgency_low]
 background = "#444444"
 foreground = "#f0f0f0"
-timeout = 15
+timeout = 5
 
 [urgency_normal]
 background = "#444444"
 foreground = "#ffffff"
-timeout = 15
+timeout = 5
 
 [urgency_critical]
 background = "#900000"
