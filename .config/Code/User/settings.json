@@ -10,12 +10,13 @@
     "editor.formatOnType": true,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
+    "editor.autoClosingBrackets": true,
     "editor.rulers": [
         79
     ],
     // workbench
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Material Theme Palenight High Contrast",
+    "workbench.colorTheme": "Gatito Theme",
     "workbench.iconTheme": "file-icons",
     "workbench.statusBar.feedback.visible": false,
     // explorer
