@@ -37,7 +37,7 @@ font-4 = unifont:fontformat=truetype:size=10:weight=bold:antialias=false;1
 fixed-center = true
 modules-left = workspaces cpu_cores cpu_temp mem_bar
 modules-center = win_title
-modules-right = vol_bar net_eth net_wlan bat_icon clock caffeine menu_sys
+modules-right = vol_bar net_eth net_wlan brightness bat_icon clock caffeine menu_sys
 
 [module/workspaces]
 type = internal/i3
@@ -184,6 +184,14 @@ label-connected =  %essid%
 label-disconnected = 
 
 format-disconnected-foreground = ${colors.warning}
+
+[module/brightness]
+type= internal/xbacklight
+
+card = intel_backlight
+
+format =  <label>
+label = %percentage%%
 
 [module/bat_icon]
 type = internal/battery
