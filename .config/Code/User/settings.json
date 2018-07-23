@@ -30,6 +30,7 @@
     "git.autofetch": true,
     // rust
     "rust-client.channel": "nightly",
+    "lldb.launch.terminal": "integrated",
     // python
     "python.jediEnabled": true,
     "python.linting.enabled": true,
