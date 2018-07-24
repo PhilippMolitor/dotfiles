@@ -274,3 +274,4 @@ menu-3-0 =  confirm
 menu-3-0-exec = i3-msg exit
 menu-3-0-foreground = ${colors.bad}
 
+# vim: syntax=dosini
