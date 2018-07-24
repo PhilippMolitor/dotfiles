@@ -13,12 +13,6 @@ plugins=(
   colored-man-pages
   colorize
   cp
-  docker
-  docker-compose
-  python
-  sudo
-  tmux
-  ufw
   virtualenv
   zsh-autosuggestions
 )
