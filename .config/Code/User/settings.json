@@ -2,10 +2,10 @@
     // ui
     "window.menuBarVisibility": "toggle",
     // editor
-    "editor.fontFamily": "Hurmit Nerd Font Mono",
+    "editor.fontFamily": "Dank Mono",
     "editor.fontSize": 12,
     "editor.cursorBlinking": "expand",
-    "editor.fontLigatures": false,
+    "editor.fontLigatures": true,
     "editor.renderIndentGuides": false,
     "editor.formatOnType": true,
     "editor.formatOnPaste": true,
