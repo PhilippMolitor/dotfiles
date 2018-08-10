@@ -50,5 +50,6 @@
     "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
     "emmet.includeLanguages": {
         "jinja-html": "html"
-    }
+    },
+    "liveServer.settings.donotShowInfoMsg": true
 }
