@@ -9,10 +9,7 @@ export UPDATE_ZSH_DAYS=7
 ZSH_THEME="lambda-mod"
 
 plugins=(
-  arch
   colored-man-pages
-  colorize
-  cp
   virtualenv
   zsh-autosuggestions
 )
@@ -88,7 +85,7 @@ alias background="wal --backend colorz -i"
 alias housekeeping="pacman -Syyu && pacman -Rns $(pacman -Qtdq) && sudo paccache -rk0 && aurman -Sc --noconfirm"
 
 # config management with git
-function dotconf {
+dotconf () {
   local cdir="$HOME/.cfg"
 
   [[ -d $cdir ]] || mkdir -p $cdir
