@@ -2,7 +2,7 @@
     // ui
     "window.menuBarVisibility": "toggle",
     // editor
-    "editor.fontFamily": "Dank Mono",
+    "editor.fontFamily": "Operator Mono Lig Medium",
     "editor.fontSize": 12,
     "editor.cursorBlinking": "expand",
     "editor.fontLigatures": true,
@@ -52,5 +52,6 @@
         "jinja-html": "html"
     },
     "liveServer.settings.donotShowInfoMsg": true,
-    "liveServer.settings.donotVerifyTags": true
+    "liveServer.settings.donotVerifyTags": true,
+    "window.zoomLevel": 0
 }
