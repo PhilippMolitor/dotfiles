@@ -2,7 +2,7 @@
     // ui
     "window.menuBarVisibility": "toggle",
     // editor
-    "editor.fontFamily": "Operator Mono Lig Medium",
+    "editor.fontFamily": "Operator Mono Lig Book",
     "editor.fontSize": 12,
     "editor.cursorBlinking": "expand",
     "editor.fontLigatures": true,
