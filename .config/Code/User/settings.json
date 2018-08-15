@@ -1,6 +1,7 @@
 {
     // ui
     "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": 0,
     // editor
     "editor.fontFamily": "Operator Mono Lig Book",
     "editor.fontSize": 12,
@@ -51,7 +52,7 @@
     "emmet.includeLanguages": {
         "jinja-html": "html"
     },
+    // liveserver
     "liveServer.settings.donotShowInfoMsg": true,
-    "liveServer.settings.donotVerifyTags": true,
-    "window.zoomLevel": 0
+    "liveServer.settings.donotVerifyTags": true
 }
