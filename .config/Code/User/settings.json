@@ -3,8 +3,8 @@
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 0,
     // editor
-    "editor.fontFamily": "Operator Mono Lig Book",
-    "editor.fontSize": 12,
+    "editor.fontFamily": "Operator Mono SSm Lig Book",
+    "editor.fontSize": 11,
     "editor.cursorBlinking": "expand",
     "editor.fontLigatures": true,
     "editor.renderIndentGuides": false,
