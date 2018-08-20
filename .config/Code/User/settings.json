@@ -2,6 +2,7 @@
     // ui
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 0,
+    "breadcrumbs.enabled": true,
     // editor
     "editor.fontFamily": "Operator Mono SSm Lig Book",
     "editor.fontSize": 11,
