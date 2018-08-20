@@ -15,6 +15,8 @@
     "editor.rulers": [
         79
     ],
+    // terminal
+    "terminal.integrated.fontSize": 11,
     // workbench
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Gatito Theme",
