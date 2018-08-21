@@ -73,6 +73,7 @@ unalias lsa 2>/dev/null
 
 if [ -x "$(command -v exa)" ]; then
   alias ls="exa -h@ --git --group --group-directories-first --color always"
+  alias lt="ls -laT"
 fi
 
 alias ll="ls -l"
