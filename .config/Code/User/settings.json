@@ -36,6 +36,7 @@
     "rust-client.channel": "nightly",
     "lldb.launch.terminal": "integrated",
     // python
+    "python.pythonPath": "${workspaceFolder}/env/bin/python",
     "python.jediEnabled": true,
     "python.linting.enabled": true,
     "python.linting.lintOnSave": true,
