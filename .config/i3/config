@@ -1,7 +1,7 @@
 # i3 config file (v4)
 #----------#
 # variables
-set $TERM termite
+set $TERM kitty
 set $LAUNCHER rofi -show combi
 set $LOCK ~/.scripts/i3lock/blurlock.sh
 
