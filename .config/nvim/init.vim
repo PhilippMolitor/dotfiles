@@ -20,6 +20,7 @@ set number
 set relativenumber
 set showmatch
 set wrap
+set cursorline
 syntax on
 
 " tabs
