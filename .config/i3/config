@@ -1,7 +1,7 @@
 # i3 config file (v4)
 #----------#
 # variables
-set $TERM kitty
+set $TERM alacritty
 set $LAUNCHER rofi -show combi
 set $LOCK ~/.scripts/i3lock/blurlock.sh
 
