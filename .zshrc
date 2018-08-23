@@ -1,7 +1,7 @@
 # First things first, colors!
 cat ~/.cache/wal/sequences
 
-# Path to your oh-my-zsh installation.
+# oh-my-zsh init
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.config/zsh
 export UPDATE_ZSH_DAYS=7
@@ -94,4 +94,11 @@ dotconf () {
 
   git --git-dir=$cdir --work-tree=$HOME/ "$@"
 }
+
+# run tmux
+if [ -x "$(command -v tmux)" ]; then
+  if [ -z "$TMUX" ]; then
+    tmux
+  fi
+fi
 
