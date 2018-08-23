@@ -94,7 +94,7 @@ type = internal/temperature
 
 interval = 5
 thermal-zone = 6
-warn-temperature = 70
+warn-temperature = 75
 units = true
 
 format = <ramp> <label>
@@ -104,10 +104,17 @@ label-warn = %temperature-c%
 label-warn-foreground = ${colors.bad}
 
 ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+ramp-6 = 
+ramp-7 = 
+ramp-8 = 
+ramp-9 = 
+ramp-10 = 
+ramp-11 = 
 
 [module/mem_bar]
 type = internal/memory
