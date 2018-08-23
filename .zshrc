@@ -98,7 +98,7 @@ dotconf () {
 # run tmux
 if [ -x "$(command -v tmux)" ]; then
   if [ -z "$TMUX" ]; then
-    tmux
+    tmux && exit
   fi
 fi
 
