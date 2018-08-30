@@ -14,6 +14,4 @@ localectl set-x11-keymap de
 
 # WM
 i3 &
-# Fallback if no login manager
-termite
 
