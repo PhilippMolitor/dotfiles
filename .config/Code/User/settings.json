@@ -14,7 +14,7 @@
     "editor.formatOnSave": true,
     "editor.autoClosingBrackets": true,
     "editor.rulers": [
-        79
+        79, 99 // Python & Rust
     ],
     // terminal
     "terminal.integrated.fontSize": 11,
