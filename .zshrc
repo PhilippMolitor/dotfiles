@@ -16,6 +16,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   colored-man-pages
   virtualenv
+  zsh-completions
   zsh-autosuggestions
   zsh-syntax-hightlighting
 )
