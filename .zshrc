@@ -17,6 +17,7 @@ plugins=(
   colored-man-pages
   virtualenv
   zsh-autosuggestions
+  zsh-syntax-hightlighting
 )
 
 # Load oh-my-zsh
