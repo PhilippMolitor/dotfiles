@@ -1,27 +1,29 @@
 # First things first, colors!
 cat ~/.cache/wal/sequences
 
-# oh-my-zsh init
+# oh-my-zsh paths
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.config/zsh
 export UPDATE_ZSH_DAYS=7
 
+# oh-my-zsh basic settings
 ZSH_THEME="lambda-mod"
+DISABLE_LS_COLORS="false"
+ENABLE_CORRECTION="false"
+COMPLETION_WAITING_DOTS="true"
 
+# oh-my-zsh plugins
 plugins=(
   colored-man-pages
   virtualenv
   zsh-autosuggestions
 )
 
-DISABLE_LS_COLORS="false"
-ENABLE_CORRECTION="false"
-COMPLETION_WAITING_DOTS="true"
-
+# Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 
-# ENV: EDITOR
+# ENV: EDITOR / VISUAL
 if [[ -n $SSH_CONNECTION ]]; then
   export TERM='xterm-256color'
 fi
