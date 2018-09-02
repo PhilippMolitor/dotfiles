@@ -23,6 +23,12 @@ set wrap
 set cursorline
 syntax on
 
+" syntax highlighting
+highlight Comment cterm=italic
+highlight Constant cterm=italic
+highlight Special cterm=italic
+highlight PreProc cterm=italic
+
 " tabs
 set softtabstop=2
 set expandtab
