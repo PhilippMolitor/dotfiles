@@ -167,20 +167,20 @@ bar-volume-foreground-4 = ${colors.bad}
 type = internal/network
 
 interface = eth0
-interval = 2
+interval = 5
 
 format-connected = <label-connected>
 format-packetloss = <label-connected>
 format-disconnected = <label-disconnected>
 label-connected =  %ifname%
 label-disconnected = 
-format-disconnected-foreground = ${colors.warning}
+format-disconnected-foreground = ${colors.fg-alt}
 
 [module/net_wlan]
 type = internal/network
 
 interface = wlan0
-interval = 2
+interval = 5
 
 format-connected = <label-connected>
 format-packetloss = <label-connected>
@@ -188,7 +188,7 @@ format-disconnected = <label-disconnected>
 label-connected =  %essid%
 label-disconnected = 
 
-format-disconnected-foreground = ${colors.warning}
+format-disconnected-foreground = ${colors.fg-alt}
 
 [module/brightness]
 type= internal/xbacklight
