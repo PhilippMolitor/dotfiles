@@ -129,7 +129,7 @@ bar-used-indicator = ─
 bar-used-fill = ━
 bar-used-empty = ━
 
-bar-used-indicator-foreground = ${colors.fg-alt}
+bar-used-indicator-foreground = ${colors.fg}
 bar-used-empty-foreground = ${colors.fg-alt}
 bar-used-foreground-0 = ${colors.good}
 bar-used-foreground-1 = ${colors.good}
@@ -155,7 +155,7 @@ bar-volume-indicator = 
 bar-volume-fill = ─
 bar-volume-empty = ─
 
-bar-volume-indicator-foreground = ${colors.fg-alt}
+bar-volume-indicator-foreground = ${colors.fg}
 bar-volume-empty-foreground = ${colors.fg-alt}
 bar-volume-foreground-0 = ${colors.good}
 bar-volume-foreground-1 = ${colors.good}
