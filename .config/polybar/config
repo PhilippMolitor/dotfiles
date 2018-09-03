@@ -13,16 +13,15 @@ bad = #e53935
 
 accent = ${xrdb:color4:#03a9f4}
 
-[bar/night]
-monitor = eDP1
 
+[bar/night]
 offset-x = 0
 offset-y = 0
 padding = 3
 module-margin = 3
 
 width = 100%
-height = 24
+height = 22
 
 foreground = ${colors.fg}
 background = ${colors.bg}
@@ -32,12 +31,13 @@ font-0 = "SF Pro Display:style=Regular:size=11;1"
 font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;2"
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;2"
 font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=10;2"
-font-4 = unifont:fontformat=truetype:size=10:weight=bold:antialias=false;1
+font-4 = unifont:fontformat=truetype:size=10:weight=bold:antialias=false;2
 
 fixed-center = true
 modules-left = workspaces cpu_cores cpu_temp mem_bar
 modules-center = win_title
 modules-right = vol_bar net_eth net_wlan brightness bat_icon clock caffeine menu_sys
+
 
 [module/workspaces]
 type = internal/i3
@@ -69,7 +69,7 @@ type = internal/cpu
 
 interval = 1
 format = <label> <ramp-coreload>
-label = 
+label = 
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -124,16 +124,17 @@ interval = 1
 format = <label>  <bar-used>
 label = 
 
-bar-used-width = 20
-bar-used-indicator =
-bar-used-fill = ▮
-bar-used-empty = ▯
+bar-used-width = 16
+bar-used-indicator = ─
+bar-used-fill = ━
+bar-used-empty = ━
 
+bar-used-indicator-foreground = ${colors.fg-alt}
+bar-used-empty-foreground = ${colors.fg-alt}
 bar-used-foreground-0 = ${colors.good}
 bar-used-foreground-1 = ${colors.good}
 bar-used-foreground-2 = ${colors.warning}
 bar-used-foreground-3 = ${colors.bad}
-bar-used-empty-foreground = ${colors.fg-alt}
 
 [module/win_title]
 type = internal/xwindow
@@ -149,21 +150,18 @@ format-volume =   <bar-volume>
 label-muted = 
 
 
-bar-volume-width = 20
-bar-volume-indicator =
-bar-volume-fill = ▮
-bar-volume-empty = ▯
+bar-volume-width = 16
+bar-volume-indicator = 
+bar-volume-fill = ─
+bar-volume-empty = ─
 
+bar-volume-indicator-foreground = ${colors.fg-alt}
+bar-volume-empty-foreground = ${colors.fg-alt}
 bar-volume-foreground-0 = ${colors.good}
 bar-volume-foreground-1 = ${colors.good}
 bar-volume-foreground-2 = ${colors.good}
-bar-volume-foreground-3 = ${colors.good}
-bar-volume-foreground-4 = ${colors.good}
-bar-volume-foreground-5 = ${colors.good}
-bar-volume-foreground-6 = ${colors.warning}
-bar-volume-foreground-7 = ${colors.warning}
-bar-volume-foreground-8 = ${colors.bad}
-bar-volume-empty-foreground = ${colors.fg-alt}
+bar-volume-foreground-3 = ${colors.warning}
+bar-volume-foreground-4 = ${colors.bad}
 
 [module/net_eth]
 type = internal/network
