@@ -125,9 +125,9 @@ format = <label>  <bar-used>
 label = 
 
 bar-used-width = 16
-bar-used-indicator = ─
-bar-used-fill = ━
-bar-used-empty = ━
+bar-used-indicator = ━
+bar-used-fill = ─
+bar-used-empty = ─
 
 bar-used-indicator-foreground = ${colors.fg}
 bar-used-empty-foreground = ${colors.fg-alt}
