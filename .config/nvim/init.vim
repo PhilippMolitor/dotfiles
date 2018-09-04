@@ -60,6 +60,9 @@ let g:indentLine_char = '┆'
 " highlighted yank & paste
 let g:highlightedyank_highlight_duration = 3000
 
+" write with root privileges
+cmap w!! w !sudo tee > /dev/null %
+
 " restore cursor position
 autocmd BufReadPost *
   \ if line("'\"") >= 1 && line("'\"") <= line("$") |
