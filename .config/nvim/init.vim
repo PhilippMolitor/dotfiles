@@ -61,7 +61,7 @@ let g:indentLine_char = '┆'
 let g:highlightedyank_highlight_duration = 3000
 
 " write with root privileges
-cmap w!! w !sudo tee > /dev/null %
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 " restore cursor position
 autocmd BufReadPost *
