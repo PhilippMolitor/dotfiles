@@ -3,7 +3,7 @@
 # variables
 set $TERM alacritty
 set $LAUNCHER rofi -show combi
-set $LOCK ~/.scripts/i3lock/blurlock.sh
+set $LOCK dm-tool lock
 
 # keys
 set $KEY_MOD Mod4
