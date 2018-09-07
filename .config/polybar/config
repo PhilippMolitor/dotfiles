@@ -188,6 +188,8 @@ format-disconnected = <label-disconnected>
 label-connected =  %essid%
 label-disconnected = 
 
+label-maxlen = 20
+
 format-disconnected-foreground = ${colors.fg-alt}
 
 [module/brightness]
