@@ -4,8 +4,7 @@
 rehash
 
 # load fonts
-xset +fp ~/.fonts/pcf
-xset +fp ~/.fonts/bdf
+xset +fp ~/.local/share/fonts
 xset fp rehash
 
 # keyboard layout: german
