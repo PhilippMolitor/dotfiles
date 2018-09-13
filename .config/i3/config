@@ -16,6 +16,7 @@ exec --no-startup-id xss-lock $LOCK
 exec --no-startup-id wal -R
 exec --no-startup-id compton -b
 exec --no-startup-id polybar -r night
+exec --no-startup-id xflux -l 53.55 -g 9.99
 exec --no-startup-id lightscreen --hidden
 
 #----------#
