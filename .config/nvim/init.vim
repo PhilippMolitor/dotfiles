@@ -21,6 +21,8 @@ set relativenumber
 set showmatch
 set wrap
 set cursorline
+set ignorecase
+set incsearch
 syntax on
 
 " syntax highlighting
