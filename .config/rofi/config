@@ -1,4 +1,4 @@
-rofi.terminal: termite
+rofi.terminal: alacritty
 rofi.ssh-client: ssh
 rofi.run-shell-command: {terminal} -e {cmd}
 rofi.ssh-command: {terminal} -e "{ssh-client} {host}" 
