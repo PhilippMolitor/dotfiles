@@ -35,6 +35,7 @@
     // rust
     "rust-client.channel": "nightly",
     "lldb.launch.terminal": "integrated",
+    "rust.clippy_preference": "on",
     // python
     "python.pythonPath": "${workspaceFolder}/env/bin/python",
     "python.jediEnabled": true,
