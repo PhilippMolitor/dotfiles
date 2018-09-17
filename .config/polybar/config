@@ -3,7 +3,7 @@ screenchange-reload = false
 
 [colors]
 fg = #f5f5f5
-bg = #d0333333
+bg = #b0303030
 fg-alt = #b8b8b8
 bg-alt = #575757
 
