@@ -42,7 +42,7 @@ custom_cursor_colors: false
 
 visual_bell:
   animation: EaseOutCirc
-  duration: 0.25
+  duration: 200
 
 mouse_bindings:
   - { mouse: Middle, action: Paste }
