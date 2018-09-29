@@ -25,6 +25,10 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 
+# enable completion to find new executables
+zstyle ':completion:*' rehash true
+
+
 # ENV: EDITOR / VISUAL
 if [[ -n $SSH_CONNECTION ]]; then
   export TERM='xterm-256color'
@@ -56,8 +60,8 @@ export MANPAGER="$PAGER"
 alias ssh="TERM=xterm-256color ssh"
 
 # all the *vi* editors!
-alias vi="$EDITOR"
-alias vim="$EDITOR"
+alias vi="$VISUAL"
+alias vim="$VISUAL"
 
 # redirect pacman to aurman
 alias pacman="aurman"
