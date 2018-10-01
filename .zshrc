@@ -103,6 +103,22 @@ dotconf () {
   git --git-dir=$cdir --work-tree=$HOME/ "$@"
 }
 
+# upload to http://transfer.sh
+transfer () {
+  if [ $# -eq 0 ]; then
+    echo -e "Invalid usage!"
+    return 1
+  fi;
+
+  local tmp_file=$(mktemp -t transfer.sh.XXXXXX)
+  local file_name=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g')
+
+  curl --progress-bar --upload-file "$1" "https://transfer.sh/$file_name" >> $tmp_file
+
+  cat $tmp_file
+  rm -f $tmp_file
+}
+
 # run tmux
 if [ -x "$(command -v tmux)" ]; then
   if [ -z "$TMUX" ]; then
