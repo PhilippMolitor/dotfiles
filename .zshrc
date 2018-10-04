@@ -91,7 +91,12 @@ alias la="ls -la"
 alias background="wal --backend colorz -i"
 
 # housekeeping (updates, cache cleanup, etc.)
-alias housekeeping="pacman -Syyu && pacman -Rncs $(pacman -Qtdq) && sudo paccache -rk0 && aurman -Sc --noconfirm"
+housekeeping () {
+  pacman -Syyu
+  pacman -Rncs $(pacman -Qtdq)
+  sudo paccache -rk0
+  aurman -Sc --noconfirm
+}
 
 # config management with git
 dotconf () {
