@@ -90,6 +90,9 @@ alias la="ls -la"
 # set pywal background
 alias background="wal --backend colorz -i"
 
+# monitor docker containers with watch
+alias docker-watch='watch -ctd -n 1 docker ps --format \"table {{.Names}}\\t{{.Image}}\\t{{.Ports}}\\t{{.Status}}\"'
+
 # housekeeping (updates, cache cleanup, etc.)
 housekeeping () {
   pacman -Syyu
