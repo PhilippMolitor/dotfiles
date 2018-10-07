@@ -69,6 +69,9 @@ alias pacman="aurman"
 # in case someone fucked up again...
 alias fuck='sudo $(fc -ln -1)'
 
+# list all currently open sockets
+alias lssockets='ss -nrlpt'
+
 # pretty mount table
 alias mountfmt="mount | column -t | sort"
 
