@@ -28,10 +28,11 @@ background = ${colors.bg}
 cursor-click = pointer
 
 font-0 = "SF Pro Display:style=Regular:size=11;1"
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;2"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;2"
-font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=10;2"
-font-4 = unifont:fontformat=truetype:size=10:weight=bold:antialias=false;2
+font-1 = "Font Awesome 5 Pro:style=Light:pixelsize=10;2"
+font-2 = "Font Awesome 5 Pro:style=Regular:pixelsize=10;2"
+font-3 = "Font Awesome 5 Pro:style=Solid:pixelsize=10;2"
+font-4 = "Font Awesome 5 Brands:style=Regular:pixelsize=10;2"
+font-5 = unifont:fontformat=truetype:size=10:weight=bold:antialias=false;2
 
 fixed-center = true
 modules-left = workspaces cpu_cores cpu_temp mem_bar
@@ -54,6 +55,11 @@ label-visible = 
 label-unfocused = 
 label-urgent = 
 
+label-focused-font = 4
+label-visible-font = 3
+label-unfocused-font = 3
+label-urgent-font = 2
+
 label-focused-foreground = ${colors.fg}
 label-visible-foreground = ${colors.fg}
 label-unfocused-foreground = ${colors.fg-alt}
@@ -69,7 +75,7 @@ type = internal/cpu
 
 interval = 1
 format = <label> <ramp-coreload>
-label = 
+label = 
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -122,7 +128,7 @@ type = internal/memory
 interval = 1
 
 format = <label>  <bar-used>
-label = 
+label = 
 
 bar-used-width = 16
 bar-used-indicator = ━
@@ -147,7 +153,7 @@ label-maxlen = 64
 type = internal/alsa
 
 format-volume =   <bar-volume>
-label-muted = 
+label-muted = 
 
 
 bar-volume-width = 16
@@ -182,13 +188,19 @@ type = internal/network
 interface = wlan0
 interval = 5
 
-format-connected = <label-connected>
-format-packetloss = <label-connected>
+format-connected = <ramp-signal> <label-connected>
+format-packetloss = <ramp-signal> <label-connected>
 format-disconnected = <label-disconnected>
-label-connected =  %essid%
-label-disconnected = 
+label-connected = %essid%
+label-disconnected = 
 
 label-maxlen = 20
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 
 format-disconnected-foreground = ${colors.fg-alt}
 
@@ -215,12 +227,14 @@ label-full = 
 label-charging = %percentage%%
 label-discharging = %percentage%%
 
+ramp-capacity-font = 3
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
+animation-charging-font = 3
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
@@ -250,6 +264,7 @@ click-left = ~/.scripts/caffeine/caffeine.sh
 click-middle = ~/.scripts/caffeine/caffeine.sh
 click-right = ~/.scripts/caffeine/caffeine.sh
 
+label-font = 4
 format-foreground = ${colors.accent}
 
 [module/menu_sys]
@@ -257,10 +272,11 @@ type = custom/menu
 
 expand-right = false
 label-open = 
-label-close = 
+label-close = 
 label-separator = "    "
 
 format-close-foreground = ${colors.highlight}
+label-close-font = 4
 
 menu-0-0 = 
 menu-0-0-exec = ~/.scripts/caffeine/caffeine.sh
