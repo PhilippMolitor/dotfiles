@@ -105,9 +105,9 @@ units = true
 
 format = <ramp> <label>
 format-warn =  <label-warn>
+format-warn-foreground = ${colors.bad}
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.bad}
 
 ramp-0 = 
 ramp-1 = 
