@@ -66,6 +66,9 @@ alias vim="$VISUAL"
 # redirect pacman to aurman
 alias pacman="aurman"
 
+# in case someone fucked up again...
+alias fuck='sudo $(fc -ln -1)'
+
 # pretty mount table
 alias mountfmt="mount | column -t | sort"
 
