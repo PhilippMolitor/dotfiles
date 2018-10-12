@@ -3,7 +3,7 @@ rofi.ssh-client: ssh
 rofi.run-shell-command: {terminal} -e {cmd}
 rofi.ssh-command: {terminal} -e {ssh-client} {host}
 
-rofi.combi-modi: window,ssh,run
+rofi.combi-modi: run,window
 
 rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
 
