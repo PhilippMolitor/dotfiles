@@ -35,7 +35,7 @@ font-4 = "Font Awesome 5 Brands:style=Regular:pixelsize=10;2"
 font-5 = unifont:fontformat=truetype:size=10:weight=bold:antialias=false;2
 
 fixed-center = true
-modules-left = workspaces cpu_cores cpu_temp mem_bar
+modules-left = workspaces cpu_cores cpu_temp gfx_info mem_bar
 modules-center = win_title
 modules-right = vol_bar net_eth net_wlan brightness bat_icon clock caffeine menu_sys
 
@@ -252,6 +252,14 @@ date =
 time = %H:%M
 date-alt = "%Y.%m.%d  /  "
 time-alt = %H:%M
+
+[module/gfx_info]
+type = custom/script
+
+exec = ~/.scripts/amdinfo/amdinfo.sh
+tail = true
+
+format-prefix = " "
 
 [module/caffeine]
 type = custom/script
