@@ -63,8 +63,8 @@ alias ssh="TERM=xterm-256color ssh"
 alias vi="$VISUAL"
 alias vim="$VISUAL"
 
-# redirect pacman to aurman
-alias pacman="aurman"
+# redirect pacman to yay
+alias pacman="yay"
 
 # in case someone fucked up again...
 alias fuck='sudo $(fc -ln -1)'
@@ -104,7 +104,7 @@ housekeeping () {
   pacman -Syyu
   pacman -Rncs $(pacman -Qtdq)
   sudo paccache -rk0
-  aurman -Sc --noconfirm
+  yay -Sc
 }
 
 # config management with git
