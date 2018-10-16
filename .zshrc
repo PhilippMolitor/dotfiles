@@ -101,10 +101,10 @@ alias docker-watch='watch -ctd -n 1 docker ps --format \"table {{.Names}}\\t{{.I
 
 # housekeeping (updates, cache cleanup, etc.)
 housekeeping () {
-  pacman -Syyu
+  pacman -Syyu --combinedupgrade
   pacman -Rncs $(pacman -Qtdq)
   sudo paccache -rk0
-  yay -Sc
+  yay -Scc --noconfirm
 }
 
 # config management with git
