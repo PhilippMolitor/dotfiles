@@ -133,10 +133,3 @@ transfer () {
   rm -f $tmp_file
 }
 
-# run tmux
-if [ -x "$(command -v tmux)" ]; then
-  if [ -z "$TMUX" ]; then
-    tmux; exit
-  fi
-fi
-

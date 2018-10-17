@@ -50,7 +50,12 @@ mouse_bindings:
 mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
-  faux_scrolling_lines: 10000
+
+scrolling:
+  history: 40000
+  multiplier: 3
+  faux_multiplier: 3
+  auto_scroll: false
 
 tabspaces: 4
 selection:
