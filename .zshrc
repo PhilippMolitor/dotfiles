@@ -64,9 +64,9 @@ alias vi="$VISUAL"
 alias vim="$VISUAL"
 
 # redirect pacman to yay
-alias pacman="yay"
+alias pacman="yay --noconfirm"
 
-# in case someone fucked up again...
+# in case someone (me) fucked up again...
 alias fuck='sudo $(fc -ln -1)'
 
 # list all currently open sockets
@@ -101,7 +101,7 @@ alias docker-watch='watch -ctd -n 1 docker ps --format \"table {{.Names}}\\t{{.I
 
 # housekeeping (updates, cache cleanup, etc.)
 housekeeping () {
-  pacman -Syyu --combinedupgrade
+  yay -Syyu --combinedupgrade --noconfirm
   pacman -Rncs $(pacman -Qtdq)
   sudo paccache -rk0
   yay -Scc --noconfirm
