@@ -7,8 +7,8 @@ source $HOME/.antigen/antigen.zsh
 # antigen plugins
 antigen bundle ael-code/zsh-colored-man-pages
 antigen bundle zsh-users/zsh-completions
-antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zdharma/fast-syntax-highlighting
 
 antigen theme cusxio/delta-prompt
 
@@ -32,6 +32,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
+# ssh settings
 if [[ -n $SSH_CONNECTION ]]; then
   export TERM='xterm-256color'
 fi
@@ -54,10 +55,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export BROWSER="/usr/bin/firefox"
 
 # ENV: PAGER
-export PAGER="most"
-export MANPAGER="$PAGER"
-
-# Aliases
+export PAGER=MANPAGER="most"
 
 # all the *vi* editors!
 alias vi="$VISUAL"
@@ -76,15 +74,10 @@ alias lssockets='ss -nrlpt'
 alias mountfmt="mount | column -t | sort"
 
 # python virtualenv
-alias venv="virtualenv"
+alias venv="virtualenv env && touch .venv"
 alias vact="source ./env/bin/activate"
 
 # ls on steroids
-unalias l 2>/dev/null
-unalias ll 2>/dev/null
-unalias la 2>/dev/null
-unalias lsa 2>/dev/null
-
 if [ -x "$(command -v exa)" ]; then
   alias ls="exa -h@ --git --group --group-directories-first --color always --color-scale"
   alias lt="ls -laT"
@@ -119,17 +112,12 @@ dotconf () {
 
 # upload to http://transfer.sh
 transfer () {
-  if [ $# -eq 0 ]; then
-    echo -e "Invalid usage!"
+  if [ $# -ne 1 ]; then
+    echo -e "Usage: transfer <file>"
     return 1
   fi;
 
-  local tmp_file=$(mktemp -t transfer.sh.XXXXXX)
   local file_name=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g')
-
-  curl --progress-bar --upload-file "$1" "https://transfer.sh/$file_name" >> $tmp_file
-
-  cat $tmp_file
-  rm -f $tmp_file
+  curl --progress-bar --upload-file "$1" "https://transfer.sh/$file_name"
 }
 
