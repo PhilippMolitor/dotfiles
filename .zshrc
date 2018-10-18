@@ -1,39 +1,42 @@
 # First things first, colors!
 cat ~/.cache/wal/sequences
 
-# oh-my-zsh paths
-export ZSH=$HOME/.oh-my-zsh
-export ZSH_CUSTOM=$HOME/.config/zsh
-export UPDATE_ZSH_DAYS=7
+# load antigen plugin manager
+source $HOME/.antigen/antigen.zsh
 
-# oh-my-zsh basic settings
-ZSH_THEME="lambda-mod"
-DISABLE_LS_COLORS="false"
-ENABLE_CORRECTION="false"
-COMPLETION_WAITING_DOTS="true"
+# antigen plugins
+antigen bundle ael-code/zsh-colored-man-pages
+antigen bundle zsh-users/zsh-completions
+antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 
-# oh-my-zsh plugins
-plugins=(
-  colored-man-pages
-  virtualenv
-  zsh-completions
-  zsh-autosuggestions
-  zsh-syntax-hightlighting
-)
+antigen theme cusxio/delta-prompt
 
-# Load oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+# apply changes (if any)
+antigen apply
 
+# history settings
+[ -z "$HISTFILE" ] && export HISTFILE=~/.zsh_history
+export SAVEHIST=HISTSIZE=20000
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt EXTENDED_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
 
-# enable completion to find new executables
+# completion features
+zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' rehash true
+zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
+bindkey '\e[A' history-beginning-search-backward
+bindkey '\e[B' history-beginning-search-forward
 
-
-# ENV: EDITOR / VISUAL
 if [[ -n $SSH_CONNECTION ]]; then
   export TERM='xterm-256color'
 fi
 
+# ENV: EDITOR / VISUAL
 if [ -x "$(command -v nvim)" ]; then
   export VISUAL='nvim'
 elif [ -x "$(command -v vim)" ]; then
@@ -55,9 +58,6 @@ export PAGER="most"
 export MANPAGER="$PAGER"
 
 # Aliases
-
-# set correct $TERM for ssh connections
-alias ssh="TERM=xterm-256color ssh"
 
 # all the *vi* editors!
 alias vi="$VISUAL"
