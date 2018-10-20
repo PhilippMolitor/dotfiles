@@ -23,14 +23,17 @@ setopt HIST_IGNORE_DUPS
 setopt EXTENDED_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 
+# key bindings
+bindkey "^[[3~" delete-char
+bindkey '\e[A' history-beginning-search-backward
+bindkey '\e[B' history-beginning-search-forward
+
 # completion features
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
-bindkey '\e[A' history-beginning-search-backward
-bindkey '\e[B' history-beginning-search-forward
 
 # ssh settings
 if [[ -n $SSH_CONNECTION ]]; then
@@ -55,7 +58,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export BROWSER="/usr/bin/firefox"
 
 # ENV: PAGER
-export PAGER=MANPAGER="most"
+export PAGER="most"
+export MANPAGER="$PAGER"
 
 # all the *vi* editors!
 alias vi="$VISUAL"
