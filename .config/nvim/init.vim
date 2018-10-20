@@ -24,6 +24,7 @@ set showbreak=>>\ \
 set cursorline
 set ignorecase
 set incsearch
+set noshowmode
 syntax on
 
 " syntax highlighting
