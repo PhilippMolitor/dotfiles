@@ -114,14 +114,8 @@ dotconf () {
   git --git-dir=$cdir --work-tree=$HOME/ "$@"
 }
 
-# upload to http://transfer.sh
-transfer () {
-  if [ $# -ne 1 ]; then
-    echo -e "Usage: transfer <file>"
-    return 1
-  fi;
-
-  local file_name=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g')
-  curl --progress-bar --upload-file "$1" "https://transfer.sh/$file_name"
+# upload to https://0x0.st
+0x0 () {
+  echo ">>  $(curl -s --fail -F "file=@$1" "https://0x0.st" || echo "error uploading $1")"
 }
 
