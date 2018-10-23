@@ -10,7 +10,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zdharma/fast-syntax-highlighting
 
-antigen theme cusxio/delta-prompt
+antigen theme philslab/abbr-zsh-theme
 
 # apply changes (if any)
 antigen apply
@@ -41,9 +41,9 @@ if [[ -n $SSH_CONNECTION ]]; then
 fi
 
 # ENV: EDITOR / VISUAL
-if [ -x "$(command -v nvim)" ]; then
+if (( $+commands[nvim] )) ; then
   export VISUAL='nvim'
-elif [ -x "$(command -v vim)" ]; then
+elif (( $+commands[vim] )) ; then
   export VISUAL='vim'
 else
   export VISUAL='vi'
@@ -82,7 +82,7 @@ alias venv="virtualenv env && touch .venv"
 alias vact="source ./env/bin/activate"
 
 # ls on steroids
-if [ -x "$(command -v exa)" ]; then
+if (( $+commands[exa] )) ; then
   alias ls="exa -h@ --git --group --group-directories-first --color always --color-scale"
   alias lt="ls -laT"
 fi
