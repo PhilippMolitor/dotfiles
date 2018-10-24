@@ -1,19 +1,19 @@
 # First things first, colors!
 cat ~/.cache/wal/sequences
 
-# load antigen plugin manager
-source $HOME/.antigen/antigen.zsh
+# load zplug plugin manager
+source $HOME/.zplug/init.zsh
 
-# antigen plugins
-antigen bundle ael-code/zsh-colored-man-pages
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zdharma/fast-syntax-highlighting
+# plugins
+zplug "ael-code/zsh-colored-man-pages"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zdharma/fast-syntax-highlighting"
 
-antigen theme philslab/abbr-zsh-theme
+zplug "philslab/abbr-zsh-theme", as:theme
 
-# apply changes (if any)
-antigen apply
+# start zplug
+zplug load
 
 # history settings
 [ -z "$HISTFILE" ] && export HISTFILE=~/.zsh_history
