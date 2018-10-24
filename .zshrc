@@ -24,17 +24,21 @@ setopt EXTENDED_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 
 # key bindings
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
 bindkey "^[[3~" delete-char
-bindkey '\e[A' history-beginning-search-backward
-bindkey '\e[B' history-beginning-search-forward
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
 
 # other zsh options
 setopt DOTGLOB
 setopt GLOB_STAR_SHORT
 
 # completion features
-zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' rehash true
+zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
