@@ -34,7 +34,6 @@ bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 
 # other zsh options
-setopt DOTGLOB
 setopt GLOB_STAR_SHORT
 
 # completion features
