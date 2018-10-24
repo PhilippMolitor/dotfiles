@@ -259,7 +259,8 @@ type = custom/script
 exec = ~/.scripts/amdinfo/amdinfo.sh
 tail = true
 
-format-prefix = " "
+format-prefix = " "
+format-prefix-font = 4
 
 [module/caffeine]
 type = custom/script
