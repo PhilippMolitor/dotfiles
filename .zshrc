@@ -5,6 +5,7 @@ cat ~/.cache/wal/sequences
 source $HOME/.zplug/init.zsh
 
 # plugins
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "ael-code/zsh-colored-man-pages"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
