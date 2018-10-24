@@ -28,6 +28,10 @@ bindkey "^[[3~" delete-char
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
+# other zsh options
+setopt DOTGLOB
+setopt GLOB_STAR_SHORT
+
 # completion features
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' rehash true
