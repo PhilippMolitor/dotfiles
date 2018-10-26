@@ -12,11 +12,12 @@ fi
 source $HOME/.zplug/init.zsh
 
 # plugins
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "ael-code/zsh-colored-man-pages"
 zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zdharma/fast-syntax-highlighting"
+zplug "zdharma/fast-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-autosuggestions", defer:2
+zplug "hlissner/zsh-autopair", defer:2
 
 zplug "philslab/abbr-zsh-theme", as:theme
 
@@ -43,6 +44,8 @@ zle -N down-line-or-beginning-search
 bindkey "^[[3~" delete-char
 bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
+bindkey "^I" expand-or-complete-prefix
+
 
 # other zsh options
 setopt GLOB_STAR_SHORT
