@@ -1,6 +1,13 @@
 # First things first, colors!
 cat ~/.cache/wal/sequences
 
+# install zplug, if needed
+if [[ ! -d "$HOME/.zplug" ]]; then
+  git clone https://github.com/zplug/zplug "$HOME/.zplug/repos/zplug/zplug"
+  ln -s "$HOME/.zplug/repos/zplug/zplug/init.zsh" "$HOME/.zplug/init.zsh"
+  RUN_ZPLUG_INSTALL=1
+fi
+
 # load zplug plugin manager
 source $HOME/.zplug/init.zsh
 
@@ -14,6 +21,10 @@ zplug "zdharma/fast-syntax-highlighting"
 zplug "philslab/abbr-zsh-theme", as:theme
 
 # start zplug
+if [[ -n $RUN_ZPLUG_INSTALL ]]; then
+  zplug install
+  unset RUN_ZPLUG_INSTALL
+fi
 zplug load
 
 # history settings
