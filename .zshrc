@@ -91,17 +91,13 @@ alias vim="$VISUAL"
 alias pacman="yay --noconfirm"
 
 # in case someone (me) fucked up again...
-alias fuck='sudo $(fc -ln -1)'
+alias fuck='sudo env "PATH=$PATH" $(fc -ln -1)'
 
 # list all currently open sockets
 alias lssockets='ss -nrlpt'
 
 # pretty mount table
 alias mountfmt="mount | column -t | sort"
-
-# python virtualenv
-alias venv="virtualenv env && touch .venv"
-alias vact="source ./env/bin/activate"
 
 # ls on steroids
 if (( $+commands[exa] )) ; then
