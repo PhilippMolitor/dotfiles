@@ -6,4 +6,5 @@ rofi.ssh-command: {terminal} -e {ssh-client} {host}
 rofi.combi-modi: run,window
 
 rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
+rofi.font: SF Pro Display 12
 
