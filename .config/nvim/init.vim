@@ -2,6 +2,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
+Plug 'b4b4r07/vim-hcl'
 Plug 'justinmk/vim-sneak'
 Plug 'machakann/vim-highlightedyank'
 Plug 'vim-airline/vim-airline'
