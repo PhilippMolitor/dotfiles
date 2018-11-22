@@ -45,7 +45,6 @@ bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 bindkey "^I" expand-or-complete-prefix
 
-
 # other zsh options
 setopt GLOB_STAR_SHORT
 
@@ -110,9 +109,6 @@ alias la="ls -la"
 # set pywal background
 alias background="wal --backend colorz -i"
 
-# monitor docker containers with watch
-alias docker-watch='watch -ctd -n 1 docker ps --format \"table {{.Names}}\\t{{.Image}}\\t{{.Ports}}\\t{{.Status}}\"'
-
 # housekeeping (updates, cache cleanup, etc.)
 housekeeping () {
   yay -Syyu --combinedupgrade --noconfirm
@@ -123,7 +119,7 @@ housekeeping () {
 
 # upload to https://0x0.st
 0x0 () {
-  echo ">>  $(curl -s --fail -F "file=@$1" "https://0x0.st" || echo "error uploading $1")"
+  curl -sf -F "file=@$1" "https://0x0.st" || echo "error uploading $1"
 }
 
 # config management with git
