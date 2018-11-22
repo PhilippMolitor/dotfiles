@@ -18,6 +18,7 @@ exec --no-startup-id compton -b
 exec --no-startup-id polybar -r night
 exec --no-startup-id xflux -l 53.55 -g 9.99
 exec --no-startup-id lightscreen --hidden
+exec --no-startup-id nextcloud --background
 
 #----------#
 # font
