@@ -1,29 +1,32 @@
 {
     // ui
     "window.menuBarVisibility": "toggle",
-    "window.zoomLevel": 0,
     "breadcrumbs.enabled": true,
-    // editor
-    "editor.fontFamily": "Operator Mono SSm Lig Book",
-    "editor.fontSize": 11,
-    "editor.cursorBlinking": "expand",
+    "workbench.startupEditor": "welcomePage",
+    "workbench.statusBar.feedback.visible": false,
+    "window.zoomLevel": 0,
+    // theming
+    "workbench.colorTheme": "Gatito Theme",
+    "workbench.iconTheme": "file-icons",
+    // fonts
     "editor.fontLigatures": true,
+    "editor.fontFamily": "Operator Mono SSm Lig",
+    "editor.fontSize": 11,
+    "editor.fontWeight": "300",
+    "terminal.integrated.fontFamily": "Operator Mono SSm Lig",
+    "terminal.integrated.fontSize": 11,
+    "terminal.integrated.fontWeight": "300",
+    // editor
+    "editor.cursorBlinking": "expand",
     "editor.renderIndentGuides": false,
     "editor.formatOnType": true,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "editor.autoClosingBrackets": true,
+    "editor.autoClosingBrackets": "always",
     "editor.rulers": [
-        79,
-        99 // Python & Rust
+        79, // Python
+        99 // Rust
     ],
-    // terminal
-    "terminal.integrated.fontSize": 11,
-    // workbench
-    "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Gatito Theme",
-    "workbench.iconTheme": "file-icons",
-    "workbench.statusBar.feedback.visible": false,
     // explorer
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
@@ -38,19 +41,12 @@
     "lldb.launch.terminal": "integrated",
     "rust.clippy_preference": "on",
     // python
-    "python.pythonPath": "${workspaceFolder}/env/bin/python",
+    "python.terminal.activateEnvironment": true,
     "python.jediEnabled": true,
     "python.linting.enabled": true,
     "python.linting.lintOnSave": true,
     "python.linting.pep8Enabled": true,
-    "python.linting.pydocstyleEnabled": true,
     "python.linting.mypyEnabled": true,
-    // guides
-    "guides.enabled": true,
-    "guides.active.gutter": true,
-    "guides.active.width": 2,
-    "guides.stack.enabled": true,
-    "guides.sendUsagesAndStats": false,
     // emmet
     "emmet.triggerExpansionOnTab": true,
     "emmet.showSuggestionsAsSnippets": true,
