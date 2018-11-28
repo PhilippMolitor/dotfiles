@@ -55,6 +55,15 @@ zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 
+# add private bin path
+PRIVATE_BIN_PATH="$HOME/.bin"
+
+if [[ -n $PRIVATE_BIN_PATH  && -d $PRIVATE_BIN_PATH ]]; then
+  export PATH="$PRIVATE_BIN_PATH:$PATH"
+  unset PRIVATE_BIN_PATH
+fi
+
+
 # ssh settings
 if [[ -n $SSH_CONNECTION ]]; then
   export TERM='xterm-256color'

@@ -256,7 +256,7 @@ time-alt = %H:%M
 [module/gfx_info]
 type = custom/script
 
-exec = ~/.scripts/amdinfo/amdinfo.sh
+exec = ~/.config/polybar/scripts/amdinfo.sh
 tail = true
 
 format-prefix = " "
@@ -266,12 +266,12 @@ format-prefix-font = 4
 type = custom/script
 
 exec = echo 
-exec-if = [ ! "$(~/.scripts/caffeine/caffeine.sh status | grep active)" == "" ]
+exec-if = [ ! "$(caffeine-switch status | grep active)" == "" ]
 interval = 5
 
-click-left = ~/.scripts/caffeine/caffeine.sh
-click-middle = ~/.scripts/caffeine/caffeine.sh
-click-right = ~/.scripts/caffeine/caffeine.sh
+click-left = caffeine-switch
+click-middle = caffeine-switch
+click-right = caffeine-switch
 
 label-font = 4
 format-foreground = ${colors.accent}
