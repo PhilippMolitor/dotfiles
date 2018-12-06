@@ -108,8 +108,9 @@ alias mountfmt="mount | column -t | sort"
 
 # ls on steroids
 if (( $+commands[exa] )) ; then
-  alias ls="exa -h@ --git --group --group-directories-first --color always --color-scale"
-  alias lt="ls -laT"
+  alias ls="exa --header --extended --git --group --group-directories-first --color-scale --color=always"
+  alias lm="exa --header --long --group --sort=modified --reverse --color always --color-scale"
+  alias lt="ls --long --tree --all"
 fi
 
 alias ll="ls -l"
