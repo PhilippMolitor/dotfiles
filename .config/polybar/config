@@ -266,12 +266,12 @@ format-prefix-font = 4
 type = custom/script
 
 exec = echo 
-exec-if = [ ! "$(caffeine-switch status | grep active)" == "" ]
+exec-if = [ ! "$(~/.config/polybar/scripts/caffeine-switch status | grep active)" == "" ]
 interval = 5
 
-click-left = caffeine-switch
-click-middle = caffeine-switch
-click-right = caffeine-switch
+click-left = ~/.config/polybar/scripts/caffeine-switch
+click-middle = ~/.config/polybar/scripts/caffeine-switch
+click-right = ~/.config/polybar/scripts/caffeine-switch
 
 label-font = 4
 format-foreground = ${colors.accent}
