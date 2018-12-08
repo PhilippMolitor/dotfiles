@@ -84,7 +84,7 @@ export EDITOR="$VISUAL"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # ENV: BROWSER
-export BROWSER="/usr/bin/firefox"
+export BROWSER="/usr/bin/firefox-developer-edition"
 
 # ENV: PAGER
 export PAGER="most"
