@@ -7,7 +7,7 @@ window:
     x: 8
     y: 8
 
-  decorations: true
+  decorations: full
 
 dynamic_title: true
 render_timer: false
@@ -33,12 +33,10 @@ font:
     x: 0
     y: 0
 
-  scale_with_dpi: true
-  use_thin_strokes: false
+  use_thin_strokes: true
 
 background_opacity: 0.8
 draw_bold_text_with_bright_colors: true
-custom_cursor_colors: false
 
 visual_bell:
   animation: EaseOutCirc
@@ -50,6 +48,7 @@ mouse_bindings:
 mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
+  hide_when_typing: false
 
 scrolling:
   history: 40000
@@ -61,9 +60,9 @@ tabspaces: 4
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
-hide_cursor_when_typing: false
-cursor_style: Block
-unfocused_hollow_cursor: true
+cursor:
+  style: Block
+  unfocused_hollow: true
 
 key_bindings:
   # Custom keys
