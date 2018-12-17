@@ -1,20 +1,54 @@
+
+dynamic_title: true
+render_timer: false
+live_config_reload: true
+background_opacity: 0.8
+draw_bold_text_with_bright_colors: true
+tabspaces: 2
+persistent_logging: false
+
 window:
+  decorations: full
+  dynamic_padding: true
+  start_maximized: false
+
   dimensions:
     columns: 80
     lines: 24
 
   padding:
-    x: 8
-    y: 8
+    x: 4
+    y: 4
 
-  decorations: full
+scrolling:
+  history: 40000
+  multiplier: 3
+  faux_multiplier: 3
+  auto_scroll: false
 
-dynamic_title: true
-render_timer: false
-live_config_reload: true
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+  save_to_clipboard: true
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+  hide_when_typing: false
+
+  url:
+    launcher: xdg-open
+    modifiers: Control
+
+mouse_bindings:
+  - { mouse: Middle, action: Paste }
+
+cursor:
+  style: Block
+  unfocused_hollow: true
 
 font:
   size: 6
+  use_thin_strokes: true
 
   normal:
     family: Operator Mono SSm Lig
@@ -33,36 +67,9 @@ font:
     x: 0
     y: 0
 
-  use_thin_strokes: true
-
-background_opacity: 0.8
-draw_bold_text_with_bright_colors: true
-
 visual_bell:
   animation: EaseOutCirc
   duration: 200
-
-mouse_bindings:
-  - { mouse: Middle, action: Paste }
-
-mouse:
-  double_click: { threshold: 300 }
-  triple_click: { threshold: 300 }
-  hide_when_typing: false
-
-scrolling:
-  history: 40000
-  multiplier: 3
-  faux_multiplier: 3
-  auto_scroll: false
-
-tabspaces: 4
-selection:
-  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
-
-cursor:
-  style: Block
-  unfocused_hollow: true
 
 key_bindings:
   # Custom keys
