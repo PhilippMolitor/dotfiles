@@ -119,6 +119,11 @@ alias la="ls -la"
 # set pywal background
 alias background="wal --backend colorz -i"
 
+# HTTPie https requests
+if (( $+commands[http] )) ; then
+  alias https='http --default-scheme=https'
+fi
+
 # housekeeping (updates, cache cleanup, etc.)
 housekeeping () {
   yay -Syyu --combinedupgrade --noconfirm
@@ -130,6 +135,17 @@ housekeeping () {
 # upload to https://0x0.st
 0x0 () {
   curl -sf -F "file=@$1" "https://0x0.st" || echo "error uploading $1"
+}
+
+# npm install --save for pip
+freezepip () {
+  for pkg in $@; do
+    pip install "$pkg" && {
+      name="$(pip show "$pkg" | grep Name: | awk '{print $2}')";
+      version="$(pip show "$pkg" | grep Version: | awk '{print $2}')";
+      echo "${name}==${version}" >> "$PWD/requirements.txt"
+    };
+  done
 }
 
 # config management with git
