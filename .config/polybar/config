@@ -186,7 +186,7 @@ format-disconnected-foreground = ${colors.fg-alt}
 type = internal/network
 
 interface = wlan0
-interval = 5
+interval = 2
 
 format-connected = <ramp-signal> <label-connected>
 format-packetloss = <ramp-signal> <label-connected>
@@ -266,12 +266,10 @@ format-prefix-font = 4
 type = custom/script
 
 exec = echo 
-exec-if = [ ! "$(~/.config/polybar/scripts/caffeine-switch status | grep active)" == "" ]
+exec-if = [ ! "$(~/.config/polybar/scripts/caffeine-switch.sh status | grep active)" == "" ]
 interval = 5
 
-click-left = ~/.config/polybar/scripts/caffeine-switch
-click-middle = ~/.config/polybar/scripts/caffeine-switch
-click-right = ~/.config/polybar/scripts/caffeine-switch
+click-left = ~/.config/polybar/scripts/caffeine-switch.sh
 
 label-font = 4
 format-foreground = ${colors.accent}
@@ -288,7 +286,7 @@ format-close-foreground = ${colors.highlight}
 label-close-font = 4
 
 menu-0-0 = 
-menu-0-0-exec = ~/.scripts/caffeine/caffeine.sh
+menu-0-0-exec = ~/.config/polybar/scripts/caffeine-switch.sh
 menu-0-1 = 
 menu-0-1-exec = menu-open-1
 menu-0-2 = 
