@@ -100,6 +100,9 @@ alias pacman="yay --noconfirm"
 # in case someone (me) fucked up again...
 alias fuck='sudo env "PATH=$PATH" $(fc -ln -1)'
 
+# happens from time to time...
+alias :q="exit"
+
 # list all currently open sockets
 alias lssockets='ss -nrlpt'
 
