@@ -95,7 +95,7 @@ alias vi="$VISUAL"
 alias vim="$VISUAL"
 
 # redirect pacman to yay
-alias pacman="yay --noconfirm"
+alias pacman="yay"
 
 # in case someone (me) fucked up again...
 alias fuck='sudo env "PATH=$PATH" $(fc -ln -1)'
@@ -130,7 +130,7 @@ fi
 # housekeeping (updates, cache cleanup, etc.)
 housekeeping () {
   yay -Syyu --combinedupgrade --noconfirm
-  pacman -Rncs $(pacman -Qtdq)
+  pacman -Rns $(pacman -Qtdq)
   sudo paccache -rk0
   yay -Scc --noconfirm
 }
