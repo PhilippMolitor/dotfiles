@@ -56,8 +56,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:highlightedyank_highlight_duration = 3000
 
 " switch to next/prev. buffer with tab/shift-tab
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
+:nnoremap <silent> <Tab> :bnext<CR>
+:nnoremap <silent> <S-Tab> :bprevious<CR>
 
 " write with root privileges
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
