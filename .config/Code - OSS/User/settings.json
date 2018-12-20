@@ -1,5 +1,6 @@
 {
     // ui
+    "window.titleBarStyle": "native",
     "window.menuBarVisibility": "toggle",
     "breadcrumbs.enabled": true,
     "workbench.startupEditor": "welcomePage",
