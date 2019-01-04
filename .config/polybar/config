@@ -28,17 +28,16 @@ background = ${colors.bg}
 cursor-click = pointer
 
 font-0 = "SF Pro Display:style=Regular:size=11;1"
-font-1 = "Font Awesome 5 Pro:style=Light:pixelsize=10;2"
-font-2 = "Font Awesome 5 Pro:style=Regular:pixelsize=10;2"
-font-3 = "Font Awesome 5 Pro:style=Solid:pixelsize=10;2"
-font-4 = "Font Awesome 5 Brands:style=Regular:pixelsize=10;2"
+font-1 = "Font Awesome 5 Pro:style=Light:pixelsize=10;3"
+font-2 = "Font Awesome 5 Pro:style=Regular:pixelsize=10;3"
+font-3 = "Font Awesome 5 Pro:style=Solid:pixelsize=10;3"
+font-4 = "Font Awesome 5 Brands:style=Regular:pixelsize=10;3"
 font-5 = unifont:fontformat=truetype:size=10:weight=bold:antialias=false;2
 
 fixed-center = true
 modules-left = workspaces cpu_cores cpu_temp gfx_info mem_bar
 modules-center = win_title
 modules-right = vol_bar net_eth net_wlan brightness bat_icon clock caffeine menu_sys
-
 
 [module/workspaces]
 type = internal/i3
