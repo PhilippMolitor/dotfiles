@@ -88,7 +88,7 @@ export BROWSER="/usr/bin/firefox-developer-edition"
 
 # ENV: PAGER
 export PAGER="most"
-export MANPAGER="$PAGER"
+export MANPAGER="$VISUAL -c 'set ft=man' -"
 
 # all the *vi* editors!
 alias vi="$VISUAL"
