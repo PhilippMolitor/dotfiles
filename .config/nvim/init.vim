@@ -4,6 +4,7 @@ Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
 Plug 'b4b4r07/vim-hcl'
 Plug 'justinmk/vim-sneak'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'machakann/vim-highlightedyank'
 Plug 'vim-airline/vim-airline'
 Plug 'dylanaraps/wal.vim'
@@ -20,9 +21,11 @@ set cursorline
 set ignorecase
 set incsearch
 set noshowmode
-syntax on
+set gdefault
+set path+=**
 
 " syntax highlighting
+syntax on
 highlight Comment cterm=italic
 highlight Constant cterm=italic
 highlight Special cterm=italic
@@ -55,9 +58,17 @@ let g:airline#extensions#tabline#enabled = 1
 " highlighted yank & paste
 let g:highlightedyank_highlight_duration = 3000
 
+" copy/paste
+vnoremap <C-c> "+y
+inoremap <C-v> <Esc>"+p
+
+" literally next/prev. line (even with wrapped lines)
+nnoremap j gj
+nnoremap k gk
+
 " switch to next/prev. buffer with tab/shift-tab
-:nnoremap <silent> <Tab> :bnext<CR>
-:nnoremap <silent> <S-Tab> :bprevious<CR>
+nnoremap <silent> <Tab> :bnext<CR>
+nnoremap <silent> <S-Tab> :bprevious<CR>
 
 " write with root privileges
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
