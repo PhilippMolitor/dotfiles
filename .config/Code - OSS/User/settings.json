@@ -11,11 +11,11 @@
     "workbench.iconTheme": "file-icons",
     // fonts
     "editor.fontLigatures": true,
-    "editor.fontFamily": "Operator Mono SSm Lig",
-    "editor.fontSize": 11,
+    "editor.fontFamily": "Dank Mono",
+    "editor.fontSize": 12,
     "editor.fontWeight": "300",
-    "terminal.integrated.fontFamily": "Operator Mono SSm Lig",
-    "terminal.integrated.fontSize": 11,
+    "terminal.integrated.fontFamily": "Dank Mono",
+    "terminal.integrated.fontSize": 12,
     "terminal.integrated.fontWeight": "300",
     // editor
     "editor.cursorBlinking": "expand",
