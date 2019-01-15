@@ -17,7 +17,6 @@ set relativenumber
 set showmatch
 set wrap
 set showbreak=⤷\ 
-set cursorline
 set ignorecase
 set incsearch
 set noshowmode
@@ -57,10 +56,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 " highlighted yank & paste
 let g:highlightedyank_highlight_duration = 3000
-
-" copy/paste
-vnoremap <C-c> "+y
-inoremap <C-v> <Esc>"+p
 
 " literally next/prev. line (even with wrapped lines)
 nnoremap j gj
