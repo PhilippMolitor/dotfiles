@@ -13,12 +13,15 @@ set $KEY_ALT Mod1
 # autostart
 exec --no-startup-id xset s 300
 exec --no-startup-id xss-lock $LOCK
-exec --no-startup-id wal -R
 exec --no-startup-id compton -b
-exec --no-startup-id polybar -r night
 exec --no-startup-id xflux -l 53.55 -g 9.99
 exec --no-startup-id lightscreen --hidden
 exec --no-startup-id nextcloud --background
+
+#----------#
+# on each i3 reload/restart
+exec_always --no-startup-id wal -R
+exec_always --no-startup-id $HOME/.config/i3/scripts/polybar.sh
 
 #----------#
 # font
