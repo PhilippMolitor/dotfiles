@@ -4,6 +4,7 @@
 set $TERM alacritty
 set $LAUNCHER rofi -show combi
 set $LOCK dm-tool lock
+set $POWERMENU $HOME/.config/i3/scripts/powermenu.sh
 
 # keys
 set $KEY_MOD Mod4
@@ -93,6 +94,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 bindsym $KEY_MOD+Return exec $TERM
 bindsym $KEY_MOD+Menu exec $LAUNCHER
 bindsym $KEY_MOD+Shift+I exec --no-startup-id $LOCK
+bindsym $KEY_MOD+P exec --no-startup-id $POWERMENU
 
 # basic container/layout actions
 floating_modifier $KEY_MOD
