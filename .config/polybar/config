@@ -1,5 +1,5 @@
 [settings]
-screenchange-reload = false
+screenchange-reload = true
 
 [colors]
 fg = #f5f5f5
@@ -17,7 +17,7 @@ accent = ${xrdb:color4:#03a9f4}
 [bar/night]
 offset-x = 0
 offset-y = 0
-padding = 3
+padding = 4
 module-margin = 3
 
 width = 100%
@@ -27,7 +27,7 @@ foreground = ${colors.fg}
 background = ${colors.bg}
 cursor-click = pointer
 
-font-0 = "SF Pro Display:style=Regular:size=11;1"
+font-0 = "SF Pro Display:style=Regular:size=11;2"
 font-1 = "Font Awesome 5 Pro:style=Light:pixelsize=10;3"
 font-2 = "Font Awesome 5 Pro:style=Regular:pixelsize=10;3"
 font-3 = "Font Awesome 5 Pro:style=Solid:pixelsize=10;3"
@@ -37,7 +37,9 @@ font-5 = unifont:fontformat=truetype:size=10:weight=bold:antialias=false;2
 fixed-center = true
 modules-left = workspaces cpu_cores cpu_temp gfx_info mem_bar
 modules-center = win_title
-modules-right = vol_bar net_eth net_wlan brightness bat_icon clock caffeine menu_sys
+modules-right = vol_bar net_wlan net_eth brightness bat_icon clock caffeine menu_sys
+
+pseudo-transparency = false
 
 [module/workspaces]
 type = internal/i3
@@ -174,12 +176,14 @@ type = internal/network
 interface = eth0
 interval = 5
 
-format-connected = <label-connected>
-format-packetloss = <label-connected>
+format-connected = %{T4}<label-connected>
+format-packetloss = %{T3}<label-connected>
 format-disconnected = <label-disconnected>
-label-connected =  %ifname%
-label-disconnected = 
+format-connected-foreground = ${colors.fg}
 format-disconnected-foreground = ${colors.fg-alt}
+
+label-connected = 
+label-disconnected = 
 
 [module/net_wlan]
 type = internal/network
@@ -191,6 +195,7 @@ format-connected = <ramp-signal> <label-connected>
 format-packetloss = <ramp-signal> <label-connected>
 format-disconnected = <label-disconnected>
 label-connected = %essid%
+label-connected-foreground = ${colors.fg-alt}
 label-disconnected = 
 
 label-maxlen = 20
@@ -200,6 +205,7 @@ ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
+ramp-signal-5 = 
 
 format-disconnected-foreground = ${colors.fg-alt}
 
@@ -290,7 +296,7 @@ menu-0-1 = 
 menu-0-1-exec = menu-open-1
 menu-0-2 = 
 menu-0-2-exec = menu-open-2
-menu-0-3 = 
+menu-0-3 = 
 menu-0-3-exec = menu-open-3
 
 menu-1-0 =  confirm
@@ -299,7 +305,7 @@ menu-1-0-foreground = ${colors.bad}
 menu-2-0 =  confirm
 menu-2-0-exec = reboot
 menu-2-0-foreground = ${colors.bad}
-menu-3-0 =  confirm
+menu-3-0 =  confirm
 menu-3-0-exec = i3-msg exit
 menu-3-0-foreground = ${colors.bad}
 
