@@ -113,7 +113,7 @@ alias mountfmt="mount | column -t | sort"
 if (( $+commands[exa] )) ; then
   alias ls="exa --header --extended --git --group --group-directories-first --color-scale --color=always"
   alias lm="exa --header --long --group --sort=modified --reverse --color always --color-scale"
-  alias lt="ls --long --tree --all"
+  alias lt="ls --long --tree --all --ignore-glob .git"
 fi
 
 alias ll="ls -l"
