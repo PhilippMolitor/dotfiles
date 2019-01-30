@@ -4,6 +4,7 @@
 set $TERM alacritty
 set $LAUNCHER rofi -show combi
 set $LOCK dm-tool lock
+set $BARSCRIPT $HOME/.config/i3/scripts/polybar.sh
 set $POWERMENU $HOME/.config/i3/scripts/powermenu.sh
 
 # keys
@@ -22,7 +23,7 @@ exec --no-startup-id nextcloud --background
 #----------#
 # on each i3 reload/restart
 exec_always --no-startup-id wal -R
-exec_always --no-startup-id $HOME/.config/i3/scripts/polybar.sh
+exec_always --no-startup-id $BARSCRIPT
 
 #----------#
 # font
@@ -68,7 +69,6 @@ workspace_auto_back_and_forth no
 default_orientation auto
 popup_during_fullscreen smart
 focus_follows_mouse yes
-focus_on_window_activation yes
 mouse_warping output
 
 # popups and similar float by default
@@ -93,7 +93,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 # base commands
 bindsym $KEY_MOD+Return exec $TERM
 bindsym $KEY_MOD+Menu exec $LAUNCHER
-bindsym $KEY_MOD+Shift+I exec --no-startup-id $LOCK
+bindsym $KEY_MOD+Escape exec --no-startup-id $LOCK
 bindsym $KEY_MOD+P exec --no-startup-id $POWERMENU
 
 # basic container/layout actions
