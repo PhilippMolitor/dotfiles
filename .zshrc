@@ -45,6 +45,11 @@ bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 bindkey "^I" expand-or-complete-prefix
 
+# dynamic terminal title
+precmd () {
+  print -Pn "\e]0;zsh - %~\a"
+}
+
 # other zsh options
 setopt GLOB_STAR_SHORT
 
