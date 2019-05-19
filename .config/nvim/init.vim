@@ -1,5 +1,6 @@
 " plugins with plugged
 call plug#begin('~/.vim/plugged')
+Plug 'jceb/vim-orgmode'
 Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
 Plug 'b4b4r07/vim-hcl'
