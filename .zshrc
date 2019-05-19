@@ -60,18 +60,19 @@ zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 
-if (( $+commands[oc] )) ; then
-  source <(oc completion zsh) 2>/dev/null
-fi
+# add additional paths
+ADDITIONAL_PATHS=(
+  "$HOME/.bin"
+  "$HOME/.cargo/bin"
+)
 
-# add private bin path
-PRIVATE_BIN_PATH="$HOME/.bin"
+for add_path in $ADDITIONAL_PATHS; do
+  if [[ -n $add_path && -d $add_path ]]; then
+    export PATH="$add_path:$PATH"
+  fi
+done
 
-if [[ -n $PRIVATE_BIN_PATH  && -d $PRIVATE_BIN_PATH ]]; then
-  export PATH="$PRIVATE_BIN_PATH:$PATH"
-  unset PRIVATE_BIN_PATH
-fi
-
+unset ADDITIONAL_PATHS
 
 # ssh settings
 if [[ -n $SSH_CONNECTION ]]; then
@@ -127,6 +128,11 @@ fi
 
 alias ll="ls -l"
 alias la="ls -la"
+
+# cat on steroids
+if (( $+commands[bat] )) ; then
+  alias cat="bat"
+fi
 
 # set pywal background
 alias background="wal --backend colorz -i"
